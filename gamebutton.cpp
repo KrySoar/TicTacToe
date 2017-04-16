@@ -28,7 +28,7 @@ void GameButton::check()
        (gameArray[2]==1 && gameArray[4]==1 && gameArray[6]==1))
     {
         QMessageBox::information(this,"TicTacToe","X has won");
-        emit quick_exit(0);
+        emit exit(0);
 
     }else if((gameArray[0]==2 && gameArray[1]==2 && gameArray[2]==2)||
              (gameArray[3]==2 && gameArray[4]==2 && gameArray[5]==2)||
@@ -42,13 +42,13 @@ void GameButton::check()
              (gameArray[2]==2 && gameArray[4]==2 && gameArray[6]==2))
     {
         QMessageBox::information(this,"TicTacToe","O has won");
-        emit quick_exit(0);
+        emit exit(0);
     }else if(gameArray[0]!=0 && gameArray[1]!=0 && gameArray[2]!=0 &&
              gameArray[3]!=0 && gameArray[4]!=0 && gameArray[5]!=0 &&
              gameArray[6]!=0 && gameArray[7]!=0 && gameArray[8]!=0)
     {
         QMessageBox::information(this,"TicTacToe","Equality");
-        emit quick_exit(0);
+        emit exit(0);
     }
 }
 
